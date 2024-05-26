@@ -24,6 +24,7 @@ describe('When using the app', () => {
           cy.get('.meal-item').nextAll().find('img').should('be.visible') //checking <img> elements for all meal-items on page
         })
     })
+    
     describe('When searching for recipes', () =>{
         it('Searches for recipes with text in search box', () => {
 
