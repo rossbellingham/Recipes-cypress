@@ -24,7 +24,7 @@ describe('When using the app', () => {
           cy.get('.meal-item').nextAll().find('img').should('be.visible') //checking <img> elements for all meal-items on page
         })
     })
-    
+
     describe('When searching for recipes', () =>{
         it('Searches for recipes with text in search box', () => {
 
@@ -74,7 +74,7 @@ describe('When using the app', () => {
           cy.get('.recipe-video').find('a').should('have.attr', 'href') //aserting the <a> tag has a href attribute
         })
 
-        it('closes modal on clicking correct element', () => {
+        it('Closes modal on clicking correct element', () => {
           cy.get('#searchInput').clear().type('noodles{enter}')
           cy.get('#mealList').should('be.visible.and.have.length', 1) 
           cy.get('#mealList').children().should('have.length.least', 1)
